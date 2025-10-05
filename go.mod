@@ -1,3 +1,3 @@
-module gRPC.app.contracts
+module github.com/vladlysakov/gRPC.app.contracts
 
-go 1.25
+go 1.23
