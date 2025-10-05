@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package users;
+
+option go_package = "gRPC.app.contracts/gen/go/users;usersv1";
+
+import "users/schemas/request/users.proto";
+import "users/schemas/response/users.proto";
+import "google/protobuf/empty.proto";
+
+service Users {
+  rpc Get (IdRequest) returns (RetrieveResponse);
+  rpc GetMany (ListRequest) returns (ListResponse);
+  rpc Update (UpdateRequest) returns (RetrieveResponse);
+  rpc Delete (IdRequest) returns (google.protobuf.Empty);
+}
